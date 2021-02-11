@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko"></html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name= "viewport" contents = "width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body class = "container">
+    <article class = "start"> 
+    <h1 class = "mt-5 text-center">✔️핵심 mbti 테스트✔️</h1>
+    <img id ="fun" class= "center mt-3"src = "http://image.kmib.co.kr/online_image/2019/0214/201902140003_23110924061639_1.jpg">
+    <button type="button" class="btn btn-dark mt-5" onclick = 'start();'>테스트 시작하기</button> 
+    </article>
+
+    <article class = "question">
+      <div class="progress mt-5">
+        <div class="progress-bar progress-bar-striped bg-secondary" role="progressbar" style="width: calc(100/13*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <h2 id = "title" class = "text-center mt-5">문제</h2>
+      <input id = "type" type="hidden" value="EI">
+      <button id = "A" type="button" class="btn btn-outline-dark mt-5">Success</button>
+      <button id = "B" type="button" class="btn btn-outline-dark mt-5">Success</button>
+    </article>
+
+    <article class = "result">
+      <img id="img" class= "rounded-circle mt-5" src = "https://www.goway.com/media/cache/aa/79/aa79264f49aae4d4b2d77f0abdeb16fc.jpg" alt="animal">
+      <h2 id ="animal" class= "text-center mt-5">동물 이름</h2>
+      <h2 id = "explain" class= "text-center mt-5"">설명</h2>
+      
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="text-center mt-5 addthis_inline_share_toolbox"></div>
+            
+    </article>
+
+<article class = "kakao_ad mt-5">
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-1xQrurejlkpPmGsW" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</article>   
+<a class = "mt-5 banner" href = "https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=S2uyeoii">
+<img class= "banner-img" src = "banner.png" alt = "banner">
+</a>
+
+    <input type = "hidden" id = "EI" value ="0">
+    <input type = "hidden" id = "SN" value ="0">
+    <input type = "hidden" id = "TF" value ="0">
+    <input type = "hidden" id = "JP" value ="0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script> 
+
+    var num =1;
+    var q = {
+      1: {"title": "나의 에너지 충전 방법은?", "type": "EI", "A": "사람들 만나면 에너지 충전!", "B":"집에 있어야 충전이 되지🏠" },
+      2: {"title": "코시국으로 인한 집콕, 이때의 나는?", "type": "EI", "A": "집에 있는거 지겹다..", "B":"평소랑 크게 다르지 않은데?" },
+      3: {"title": "내가 집중하는 것은", "type": "SN", "A": "현재", "B":"가능성" },
+      4: {"title": "팀원이 과제를 잘못해온 경우 나는", "type": "TF", "A": "잘못된 부분을 얘기하고 고쳐달라고 요청한다", "B": "돌려서 얘기하거나 그냥 내가 한다" },
+      5: {"title": "비행기가 흔들리면 나는", "type": "SN", "A": "비행기가 조금 흔들리네", "B":"사고가 나려나 어떡하지?" },
+      6: {"title": "나는 계획을 세울 때", "type": "JP", "A": "이번 주 계획 다", "B":"그날 계획만" },
+      7: {"title": "친구가 아프면", "type": "TF", "A": "약을 사다준다", "B":"친구의 위로해준다" },
+      8: {"title": "나에게 멍 때리기란?", "type": "SN", "A": "아무생각 안하는 것", "B":"사실 끊임없이 뭔가를 생각중" },
+      9: {"title": "친구/연인과 만날때 장소는", "type": "JP", "A": "최소한 전날까지 생각해둔다", "B":"그날 삘 오는대로" },
+      10: {"title": "사람들 간에 문제가 생기면", "type": "TF", "A": "티는 안내도 잘잘못을 따진다", "B":"최대한 서로 상처 안 받게 마무리" },
+      11: {"title": "연휴는", "type": "EI", "A": "소중한 사람들과 함께", "B":"일단 나부터 좀 쉬자" },
+      12: {"title": "인생은", "type": "JP", "B": "생각한 대로 되지 않는다", "A":"계획하고 대비하는 거지" }
+    }
+    var result ={
+      "ISTJ": {"animal": "하마", "explain":"하마 설명", "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hippo_at_dawn.jpg/220px-Hippo_at_dawn.jpg"},
+      "ISTP": {"animal": "하마", "explain":"하마 설명", "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hippo_at_dawn.jpg/220px-Hippo_at_dawn.jpg"},
+      "INTP": {"animal": "하마", "explain":"하마 설명", "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hippo_at_dawn.jpg/220px-Hippo_at_dawn.jpg"},
+    }
+
+    function start(){
+      $(".start").hide();
+      $(".question").show();
+      next();
+    } 
+
+    $("#A").click(function(){
+     var type = $("#type").val();
+     var prevalue = $("#"+type).val();
+     $("#"+type).val(parseInt(prevalue)+1);
+     next();
+    //  console.log(parseInt(prevalue) + 1);
+    });
+
+    $("#B").click(function(){
+     var type = $("#type").val();
+     var prevalue = $("#"+type).val();
+     $("#"+type).val(parseInt(prevalue)-1);
+     next();
+    //  console.log(parseInt(prevalue) - 1);
+    });
+
+  function next(){
+    if(num ==13)
+  {
+    $(".question").hide();
+    $(".result").show();
+    var mbti = "";
+    ($("#EI").val()<2) ? mbti+="I" : mbti+="E";
+    ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
+    ($("#TF").val()<2) ? mbti+="F" : mbti+="T";
+    ($("#JP").val()<2) ? mbti+="P" : mbti+="J";
+    alert(mbti);
+
+    $("#img").attr("src", result[mbti]["img"]);
+    $("#animal").html(result[mbti]["animal"]);
+    $("#explain").html(result[mbti]["explain"]);
+    
+  }
+  else{
+  $(".progress-bar").attr('style','width: calc(100/13*'+num+'%)');
+  $("#title").html(q[num]["title"]);
+  $("#type").val(q[num]["type"]);
+  $("#A").html(q[num]["A"]);
+  $("#B").html(q[num]["B"]);
+    num++;
+    
+  }
+  
+}
+   </script>
+   <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60255a3a61076b06"></script>
+
+  </body>
+
+</html>
