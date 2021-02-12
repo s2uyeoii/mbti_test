@@ -3,9 +3,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name= "viewport" contents = "width=device-width, initial-scale=1.0">
+    <meta name= "viewport" content = "width=device-width, initial-scale=1.0, minimum-scale= 0.0, maximum-scale= 3.0">
     <title>사극 캐릭터 테스트</title>
-    <meta name = "description" content = "간단한 mbti 테스트를 통해 나랑 비슷한 사극 캐릭터 찾기 small but mighty"
+    <meta name = "description" content = "간단한 mbti 테스트를 통해 나랑 비슷한 사극 캐릭터 찾기 small but mighty">
     <meta property="og:type" content="website"> 
 <meta property="og:title" content="사극 캐릭터 테스트">
 <meta property="og:description" content="간단한 mbti 테스트를 통해 나랑 비슷한 사극 캐릭터 찾기 small but mighty">
@@ -24,12 +24,13 @@
 
     <article class = "question">
       <div class="progress mt-5">
-        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: calc(100/13*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: calc(100/13*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       <h2 id = "title" class = "text-center mt-5">문제</h2>
       <input id = "type" type="hidden" value="EI">
       <button id = "A" type="button" class="btn btn-outline-danger btn-lg mt-5">Success</button>
       <button id = "B" type="button" class="btn btn-outline-danger btn-lg mt-5">Success</button>
+      
     </article>
 
     <article class = "result">
@@ -70,7 +71,7 @@
       5: {"title": "비행기가 흔들리면 나는", "type": "SN", "A": "비행기가 조금 흔들리네", "B":"사고가 나려나 어떡하지?" },
       6: {"title": "나는 계획을 세울 때", "type": "JP", "A": "이번 주 계획 다", "B":"그날 계획만" },
       7: {"title": "친구가 아프면", "type": "TF", "A": "약을 사다준다", "B":"친구를 위로해준다" },
-      8: {"title": "나에게 멍 때리기란?", "type": "SN", "A": "아무생각 안하는 것", "B":"사실 끊임없이 뭔가를 생각중" },
+      8: {"title": "나에게 멍 때리기란?", "type": "SN", "A": "아무 생각 안하는 것", "B":"사실 끊임없이 뭔가를 생각중" },
       9: {"title": "친구/연인과 만날때 장소는", "type": "JP", "A": "최소한 전날까지 생각해둔다", "B":"그날 삘 오는대로" },
       10: {"title": "사람들 간에 문제가 생기면", "type": "TF", "A": "티는 안내도 잘잘못을 따진다", "B":"최대한 서로 상처 안 받게 마무리" },
       11: {"title": "연휴는", "type": "EI", "A": "소중한 사람들과 함께", "B":"일단 나부터 좀 쉬자" },
@@ -89,18 +90,24 @@
     } 
 
     $("#A").click(function(){
+      $("#A").focus();
      var type = $("#type").val();
      var prevalue = $("#"+type).val();
      $("#"+type).val(parseInt(prevalue)+1);
+     $("#A").blur();
      next();
+
     //  console.log(parseInt(prevalue) + 1);
     });
 
     $("#B").click(function(){
+      $("#B").focus();
      var type = $("#type").val();
      var prevalue = $("#"+type).val();
      $("#"+type).val(parseInt(prevalue)-1);
+     $("#B").blur();
      next();
+     
     //  console.log(parseInt(prevalue) - 1);
     });
 
@@ -122,22 +129,22 @@
     
   }
   else{
+    
   $(".progress-bar").attr('style','width: calc(100/13*'+num+'%)');
   $("#title").html(q[num]["title"]);
   $("#type").val(q[num]["type"]);
   $("#A").html(q[num]["A"]);
   $("#B").html(q[num]["B"]);
     num++;
-    
+
   }
-  
+ 
 }
    </script>
    <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60255a3a61076b06"></script>
-<footer class = "text-center mt-5">
-  COPYRIGHT©2021 S2uyeoii
-</footer>
   </body>
-
+  <footer class = "text-center mt-5">
+    COPYRIGHT©2021 S2uyeoii
+  </footer>
 </html>
