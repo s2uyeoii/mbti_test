@@ -1,20 +1,26 @@
-@font-face {
-    font-family: 'RIDIBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
 head{
-    font-family : 'RIDIBatang';
+    font-family: 'Yeon Sung', cursive;
+    color : #632e21;
+    background-color: #f8dfce;
     
 
 }
 body{
-    font-family : 'RIDIBatang';
+    font-family: 'Yeon Sung', cursive;
+    font-size: 23px;
+    text-align: center;
+    color : #632e21;
+    background-color: #f8dfce;
 
 }
+footer{
+    font-size: 15px;
+}
 
-
+html{
+  background-color: #f8dfce;
+}
 article{
     display: flex;
     
@@ -46,7 +52,7 @@ article{
     margin: 0 auto;
 }
 #fun{
-    width:300px;
+    width:380px;
     height:300px;
     margin: 0 auto;
 }
