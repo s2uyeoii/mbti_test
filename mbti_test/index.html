@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko"></html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name= "viewport" content = "width=device-width, initial-scale=1.0, minimum-scale= 0.0, maximum-scale= 3.0">
+    <title>드라마 캐릭터 테스트</title>
+    <meta name = "description" content = "간단한 mbti 테스트를 통해 나랑 비슷한 드라마 캐릭터 찾기 small but mighty">
+    <meta property="og:type" content="website"> 
+<meta property="og:title" content="드라마 캐릭터 테스트">
+<meta property="og:description" content="간단한 mbti 테스트를 통해 나랑 비슷한 드라마 캐릭터 찾기 small but mighty">
+<meta property="og:image" content="http://image.kmib.co.kr/online_image/2019/0214/201902140003_23110924061639_1.jpg">
+<meta property="og:url" content="https://simplembti.netlify.app/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <script data-ad-client="ca-pub-9701263718690528" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   
+  </head>
+  <body class = "container">
+    <article class = "start"> 
+    <h1 class = "mt-5 text-center">드라마 캐릭터 테스트🌺</h1>
+    <br>"나와 닮은 극 중 등장인물은 누구일까?"
+    <img id ="fun" class= "center mt-3"src = "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F1332C533512402A515">
+    <button type="button" class="btn btn-danger mt-5" onclick = 'start();'>테스트 시작하기</button> 
+    </article>
+
+    <article class = "question">
+      <div class="progress mt-5">
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: calc(100/13*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <h2 id = "title" class = "text-center mt-5">문제</h2>
+      <input id = "type" type="hidden" value="EI">
+      <button id = "A" type="button" class="btn btn-outline-danger btn-lg mt-5">Success</button>
+      <button id = "B" type="button" class="btn btn-outline-danger btn-lg mt-5">Success</button>
+      
+    </article>
+
+    <article class = "result">
+      <img id="img" class= "rounded-circle mt-5" src = "https://www.goway.com/media/cache/aa/79/aa79264f49aae4d4b2d77f0abdeb16fc.jpg" alt="animal">
+      <h2 id ="animal" class= "text-center mt-5">캐릭터 이름</h2>
+      <div class="video-wrap">
+      <iframe id = "video" width="100%" height="315" src="https://www.youtube.com/embed/aO0E81wxPTc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+      <h2 id = "explain" class= "text-center mt-5">설명</h2>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                
+                <div class="text-center mt-5 addthis_inline_share_toolbox">결과 공유하기</div>
+                <button type="button" class="btn btn-danger mt-5" onclick = 'restart();'>테스트 다시하기</button> 
+            
+    </article>
+
+<article class = "kakao_ad mt-5">
+  <ins class="kakao_ad_area" style="display:none;" 
+  data-ad-unit    = "DAN-c7dCNCbaJwsJSDI5" 
+  data-ad-width   = "320" 
+  data-ad-height  = "50"></ins> 
+ <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</article>   
+<a class = "mt-5 banner" href = "https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=S2uyeoii">
+<img class= "banner-img" src = "banner.png" alt = "banner">
+</a>
+
+    <input type = "hidden" id = "EI" value ="0">
+    <input type = "hidden" id = "SN" value ="0">
+    <input type = "hidden" id = "TF" value ="0">
+    <input type = "hidden" id = "JP" value ="0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script> 
+
+    var num =1;
+    var q = {
+      1: {"title": "나의 에너지 충전 방법은?", "type": "EI", "A": "꺄항항 약속 잡아야지🏃‍♀️🏃", "B":"집에 있어야 충전이 되지🏠" },
+      2: {"title": "코시국으로 인한 집콕, 이때의 나는?", "type": "EI", "A": "격하게 나가고 싶다..", "B":"평소랑 크게 다르지 않은데?" },
+      3: {"title": "내가 집중하는 것은", "type": "SN", "A": "현재", "B":"가능성" },
+      4: {"title": "팀원이 과제를 잘못해온 경우 나는", "type": "TF", "A": "잘못된 부분을 얘기하고 고쳐달라고 요청한다", "B": "돌려서 얘기하거나 그냥 내가 한다" },
+      5: {"title": "비행기가 흔들리면 나는", "type": "SN", "A": "뭐지 비행기가 좀 흔들리네", "B":"사고 나면 어떡하지?" },
+      6: {"title": "나는 계획을 세울 때", "type": "JP", "A": "이번 주 계획 다", "B":"그 날 계획만" },
+      7: {"title": "친구가 아프다고 하면", "type": "TF", "A": "엥ㅜㅜ어디 아퍼", "B":"ㅜㅜ괜찮아?" },
+      8: {"title": "나에게 멍 때리기란?", "type": "SN", "A": "아무 생각 안하는 것", "B":"사실 끊임없이 뭔가를 생각중" },
+      9: {"title": "친구/연인과 만날때 장소는", "type": "JP", "A": "최소한 전날까지 생각해둔다", "B":"그 날 feel 오는대로" },
+      10: {"title": "사람들 간에 문제가 생기면", "type": "TF", "A": "잘잘못을 따지고 개선점 도출에 집중", "B":"최대한 서로 상처 안 받게 마무리하는 것에 집중" },
+      11: {"title": "연휴는", "type": "EI", "A": "소중한 사람들과 함께", "B":"일단 나부터 좀 쉬자" },
+      12: {"title": "인생은", "type": "JP", "B": "생각한 대로 되지 않는다", "A":"계획하고 대비하는 거지" }
+    }
+        var result ={
+      "ENFJ": {"video": "https://www.youtube.com/hj86KclDQNw", "animal": "유시진(태양의 후예)", "explain":"따뜻하고 적극적이며 책임감이 강하고 사교성이 풍부하고 동정심이 많은 캐릭터. 상당히 이타적이고 민첩하고 인화를 중요시하며 참을성이 많다. 다른 사람들의 생각이나 의견에 진지한 관심을 가지고 공동선을 위하여 다른 사람의 의견에 대체로 동의한다. 현재보다는 미래의 가능성을 추구하며 편안하고 능란하게 계획을 제시하고 집단을 이끌어가는 능력이 있는 당신은 '유시진' 캐릭터와 닮았네요.", "img":"https://pds.joins.com/news/component/htmlphoto_mmdata/201604/15/htm_20160415173048716216.jpg"},
+      "ENFP": {"video": "https://www.youtube.com/embed/QJ5qEoNBEk0", "animal": "황정음(지붕뚫고 하이킥)", "explain":"외향적이고 이상을 추구하며 감정적이고 자유로운 캐릭터. 아이디어가 넘치고 친화적이면서 헤실실 웃고다니는 긍정적인 인상에서인지 인싸인 경우가 많다. 사람을 좋아하고, 자신도 모를 어딘가 사람을 끌어당기는 힘이 있다. 익숙한 것보단 새로운 것을 더 좋아하며, 무언가를 할 때 순간 집중력이 좋아서 벼락치기 등을 해도 성과가 상당히 나와주지만 그만큼 끈기가 없어서 장기적으로 무언가 하길 힘들어하며 반복적인 일상을 매우 극혐한다.", "img":"https://cdnweb01.wikitree.co.kr/webdata/editor/201510/26/img_20151026164949_cc882e87.jpg"},
+      "ENTJ": {"video": "https://www.youtube.com/embed/l_WZRxzMgcA", "animal": "강모연(태양의 후예)", "explain":"외향적이면서 신념이 뚜렷하고, 이성적이며, 청사진을 강력히 제시하는 타입. 이들은 목표지향적, 성취중심적인 사람들이며, 지극히 합리적, 계획적인 지도자로서 카리스마가 뛰어나 말빨이 어마어마하게 절륜하다. 선천적인 리더인 경우가 많아 학창시절부터 학급회장 등의 자리에 오를 때가 많다. 또한 자기 자리와 그에 따른 의무에 대한 책임감도 뛰어나서 일을 끝까지 밀고나가는 끈기와 추진력도 갖추고 있다. 자신이 책임지지 못할 것 같은 자리는 과감하게 포기하기도 한다.", "img":"https://pbs.twimg.com/profile_images/959460835667066880/mOffv-P7_400x400.jpg"},
+      "ENTP": {"video": "https://www.youtube.com/embed/EEBF1P7lddM", "animal": "란초(세 얼간이)", "explain":"박식하고 독창적이며 창의력이 풍부한 타입. 안목이 넓고 다방면에 관심과 재능이 많다. 풍부한 상상력과 새로운 일을 시도하는 솔선력이 강하며 논리적이다. 새로운 문제나 복잡한 문제에 해결 능력이 뛰어나며 사람들의 동향에 대해 기민하고 박식하다. 그러나 일상적이고 세부적인 일을 경시하고 태만하기 쉽다. 즉, 관심을 갖고 있는 분야에서는 대단한 수행 능력을 가지고 있지만 새로운 도전이 없는 일에는 흥미를 가지지 못한다.", "img":"https://t1.daumcdn.net/cfile/blog/2477B83C543753D305"},
+      "ESFJ": {"video": "https://www.youtube.com/embed/kQIrpVJswI4", "animal": "최연교(기생충)", "explain":"동정심이 많고 다른 사람에게 관심을 쏟으며 인화를 중시한다. 타고난 협력자로서 동료애가 많고 친절하며 능동적인 구성원이다. 이야기 하기를 즐기며 정리정돈을 잘하고 참을성이 많고 다른 사람들을 잘 도와준다. 사람을 다루고 행동을 요구하는 분야, 예를 들면 교직, 성직, 판매 특히 동정심을 필요로 하는 간호나 의료 분야에 적합하다. 일이나 사람들에 대한 문제에 대하여 냉철한 입장을 취하기 어려워한다.", "img":"https://pds.joins.com/news/component/htmlphoto_mmdata/201707/09/74fe86c9-1d64-40ea-a906-3c9142b60ea7.jpg"},
+      "ESFP": {"video": "https://www.youtube.com/embed/PtSeDe3b7Gs","animal": "오스카(시크릿 가든)", "explain":"사교적이고 활동적이며 수용력이 강하고 친절하며 낙천적이다. 어떤 상황이든 잘 적응하며 현실적이고 실제적이다. 주위의 사람이나 일어나는 일에 대하여 관심이 많으며 사람이나 사물을 다루는 사실적인 상식이 풍부하다. 때로는 조금 수다스럽고, 진지함이 결여되거나 마무리를 등한시하는 경향이 있으나, 어떤 조직체나 공동체에서 밝고 재미있는 분위기 조성 역할을 잘한다.", "img":"https://post-phinf.pstatic.net/MjAyMDAxMTRfMTM4/MDAxNTc5MDA1Nzk3NDM4.PxZRxnJ4Z-mnhBSNSEpTxa-qv0yTlcrfL19dgZe4KM0g.tmc7vZd5eqAFxdT1DSuPe-oiJUITepCmIdyGrSfQ2WAg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg?type=w1200"},
+      "INFJ": {"video": "https://www.youtube.com/embed/d-lmZG80SPI", "animal": "장그래(미생)", "explain":"인내심이 많고 통찰력과 직관력이 뛰어나며 화합을 추구한다. 창의력이 좋으며, 성숙한 경우엔 강한 직관력으로 타인에게 영향력을 끼친다. 독창성과 내적 독립심이 강하며, 확고한 신념과 열정으로 자신의 영감을 구현시켜 나가는 정신적 지도자들이 많다. 한 곳에 몰두하는 경향으로 목적 달성에 필요한 주변적인 조건들을 경시하기 쉽고, 자기 내부의 갈등이 많고 복잡하다. 이들은 풍부하고 감성적인 내적인 생활을 소유하고 있다.", "img":"http://www.the-pr.co.kr/news/photo/201412/12274_40764_5856.jpg"},
+      "INFP": {"video": "https://www.youtube.com/embed/qn1ZMiqcsMk", "animal": "루나 러브굿(해리포터)", "explain":"정열적이고 충실하며 목가적이고, 낭만적이며 내적 신념이 깊다. 마음이 따뜻하고 조용하며 자신과 관계있는 일이나 사람에 대하여 책임감이 강하고 성실하다. 이해심이 많고 관대하고 자신이 지향하는 이상에 대하여 정열적인 신념을 가졌으며, 남을 지배하거나, 주변 사람들과 경쟁까지 해가며 타인한테 좋은 인상을 주고자 하는 경향이 거의 없다. 완벽주의적 경향이 있고, 노동의 대가를 넘어서 자신이 하는 일에 의미를 찾고자하는 경향이 있으며, 인간 이해와 인간 복지에 기여할 수 있는 일을 하기를 원한다. ", "img":"https://pbs.twimg.com/profile_images/3033606286/d4d7adfc6624d33a6c28118758e85e90.jpeg"},
+      "ESTJ": {"video": "https://www.youtube.com/embed/nif42pRf1qI", "animal": "미실(선덕여왕)", "explain":"현실적, 구체적이고 사실적이며 활동을 조직화하고 주도해 나가는 지도력이 있다. 실질적이고 현실 감각이 뛰어나며 일을 조직하고 계획하여 추진시키는 능력이 있다. 기계 분야나 행정 분야에 재능을 지녔으며, 체계적으로 사업체나 조직체를 이끌어 나간다. 타고난 지도자로서 일의 목표를 설정하고, 지시하고 결정하고 이행하는 능력이 있다. ", "img":"http://img.khan.co.kr/news/2009/11/16/20091116001072_r.jpg"},
+      "ESTP": {"video": "https://www.youtube.com/embed/FsqhXThTyHA", "animal": "고니(타짜)", "explain":"사실적이고 관대하며 개방적이고 사람이나 사물에 대한 선입견이 별로 없다. 강한 현실 감각으로 타협책을 모색하고 문제를 해결하는 능력이 뛰어나다. 센스 있고 유머러스하다. 어디서든 적응을 잘 하고 친구와 어울리기를 좋아한다. 긴 설명을 싫어하고 운동, 음식 등 주로 오감으로 보고 듣고 만질 수 있는 삶의 모든 것을 즐기는 유형이다. ", "img":"https://blog.kakaocdn.net/dn/dgwL2d/btqxIEFmw8B/dFeTcpcSoZA7HHVJvIAZ8K/img.jpg"},
+      "INTJ": {"video": "https://www.youtube.com/embed/canTy1lsNbk", "animal": "세베루스 스네이프(해리포터)", "explain":"내향적이며 이상을 추구하고 이성적이면서도 의지가 매우 강한 사람이다. 현실적 어려움에 부딪히더라도 끝까지 견디고 이겨내면서 자신이 떠올린 생각이나 사상을 현실세계에 체계화시켜서 나타내고야 마는 사람들인데, 그래서 과학자들 같은 느낌을 준다. 흔히 전략가형이라고 칭하기도 한다.", "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hippo_at_dawn.jpg/220px-Hippo_at_dawn.jpghttps://wiki.dcinside.com/images/a/aa/Severus-Snape.jpg"},
+      "INTP": {"video": "https://www.youtube.com/embed/IwR0k6yWq50", "animal": "브루스 배너(어벤져스)", "explain":"조용하고 과묵하며 논리와 분석으로 문제를 해결하기 좋아한다. 먼저 대화를 시작하지 않는 편이나 관심이 있는 분야에 대해서는 말을 많이 한다. 이해가 빠르고 높은 직관력으로 통찰하는 재능과 지적 호기심이 많아, 매우 분석적이고 논리적이며 객관적 비평을 잘 한다. ", "img":"https://mblogthumb-phinf.pstatic.net/MjAyMDA1MThfMTM4/MDAxNTg5NzgzNzMxMDY0.hr9OwVotVoEpFk7PR-uRzcAjkAFQDDteFbYmqi7WXJMg.RvTSIy4syy9jjxJ_i4SPOVMgJMFA09aMHd6yzt9b4mgg.JPEG.pcokgo/SE-a3be8b36-c5ba-492b-bccf-d5a7072b77b8.jpg?type=w800"},
+      "ISTJ": {"video": "https://www.youtube.com/embed/b2jwNKH2XOI", "animal": "와스프(앤트맨과 와스프)", "explain":"실제 사실에 대하여 정확하고 체계적으로 기억하며 일 처리에 있어서도 신중하고 책임감이 있다. 집중력이 강한 현실 감각을 지녔으며 조직적이고 침착하다. 보수적인 경향이 있으며, 문제를 해결하는데 과거의 경험을 잘 적용하며, 반복되는 일상적인 일에 대한 인내력이 강하다. ", "img":"https://post-phinf.pstatic.net/MjAxODA3MDNfMTIg/MDAxNTMwNjE0MzE1MTI1.ph-hZfNcb_kXDJ1NFXqjiOwZfvgvCH2n5eR_JuRnQmMg.yuDbltZHiHjcWr1tnXoUjGp5EGDBDaV77jXZskSimncg.JPEG/%EC%99%80%EC%8A%A4%ED%94%84.jpg?type=w1200"},
+      "ISTP": {"video": "https://www.youtube.com/embed/aO0E81wxPTc", "animal": "김기정(기생충)", "explain":"조용하고 과묵하며 절제된 호기심으로 인생을 관찰하고, 상황을 파악하는 민감성과 도구를 다루는 뛰어난 능력이 있다. 말이 없으며, 객관적으로 인생을 관찰하는 유형이다. 필요 이상으로 자신을 발휘하지 않으며, 일과 관계되지 않는이상 어떤 상황이나 인간관계에 직접 뛰어들지 않는다. 가능한 에너지 소비를 하지 않으려 한다.", "img":"data:image/jpeg;base64,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"},
+      "ISFP": {"video": "https://www.youtube.com/embed/AW3fJrVtdvM", "animal": "쥬얼리 정(지붕뚫고 하이킥)", "explain":"말없이 다정하고 온화하며 사람들에게 친절하고 겸손하나 상대방을 잘 알게 될 때까지 따뜻함을 잘 드러내지 않는다. 동정적이며 자기 능력에 대해 모든 성격 유형 중에서 가장 겸손하고 적응력과 관용이 많다. 자신의 의견이나 가치를 타인에게 강요하지 않으며 의견 충돌을 피하고, 인화를 중시한다. ", "img":"https://w.namu.la/s/a253518a8c6cebd5edc6deb9a9dbeac0a5050a62fe1aca88c60fb6afe4ef79093ad0c134522af2e1d3e2099a2e83a75033aa2a31ad750d78fc2b62a333224e9c9f967c9696cc049abb6e3f8c75f30acc3ed236e97b185275aa68467bea2e0d397f695ffd8dae7cec1749bc80994cdf75"},
+      "ISFJ": {"video": "https://www.youtube.com/embed/9HSq-hvMUFo", "animal": "신세경(지붕뚫고 하이킥)", "explain":"조용하고 차분하며 온정적이고 친근하다. 책임감과 인내력 또한 매우 강하다. 본인이 존경하거나 좋아하는 사람에 대해서는 충성심과 애정이 가득하다. 이들은 언제나 진솔하려 노력하고 가볍지 않기 때문에 관계를 맺기에 가장 믿음직스러운 유형이다.", "img":"https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F187AA33B4F05EBFD0F"},
+    }
+
+    function start(){
+      $(".start").hide();
+      $(".question").show();
+      next();
+    } 
+    
+    function restart(){
+      $(".result").hide();
+      $(".start").show();
+      num = num-12;
+      $("#EI").val(parseInt(0));
+      $("#SN").val(parseInt(0));
+      $("#TF").val(parseInt(0));
+      $("#JP").val(parseInt(0));
+    }
+
+    $("#A").click(function(){
+      $("#A").focus();
+     var type = $("#type").val();
+     var prevalue = $("#"+type).val();
+     $("#"+type).val(parseInt(prevalue)+1);
+     $("#A").blur();
+     next();
+
+    //  console.log(parseInt(prevalue) + 1);
+    });
+
+    $("#B").click(function(){
+      $("#B").focus();
+     var type = $("#type").val();
+     var prevalue = $("#"+type).val();
+     $("#"+type).val(parseInt(prevalue)-1);
+     $("#B").blur();
+     next();
+     
+    //  console.log(parseInt(prevalue) - 1);
+    });
+
+  function next(){
+    if(num ==13)
+  {
+    $(".question").hide();
+    $(".result").show();
+    var mbti = "";
+    ($("#EI").val()<1) ? mbti+="I" : mbti+="E";
+    ($("#SN").val()<1) ? mbti+="N" : mbti+="S";
+    ($("#TF").val()<1) ? mbti+="F" : mbti+="T";
+    ($("#JP").val()<1) ? mbti+="P" : mbti+="J";
+    alert(mbti);
+
+    $("#img").attr("src", result[mbti]["img"]);
+    $("#animal").html(result[mbti]["animal"]);
+    $("#explain").html(result[mbti]["explain"]);
+    $("#video").attr("src", result[mbti]["video"]);
+    
+  }
+  else{
+    
+  $(".progress-bar").attr('style','width: calc(100/13*'+num+'%)');
+  $("#title").html(q[num]["title"]);
+  $("#type").val(q[num]["type"]);
+  $("#A").html(q[num]["A"]);
+  $("#B").html(q[num]["B"]);
+    num++;
+
+  }
+ 
+}
+   </script>
+   <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60255a3a61076b06"></script>
+  </body>
+  <footer class = "text-center mt-5">
+    COPYRIGHT©2021 S2uyeoii
+    <a href = "https://www.youtube.com/c/%EC%A1%B0%EC%BD%94%EB%94%A9JoCoding/featured">제작도움: 조코딩 유튜브 채널</a>
+  </footer>
+</html>
